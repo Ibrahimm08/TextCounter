@@ -1,0 +1,184 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    /* Darkmode Theme */
+    --Bg: rgb(22, 22, 44);
+    --TextArea: rgb(36, 28, 51);
+    --Text: white;
+    --Toggle: rgb(255, 190, 69);
+    --TextToggle: black;
+
+    /* Other Colours */
+    --Clr1: rgb(177, 95, 177);
+    --Clr2: rgb(255, 190, 69);
+    --Clr3: rgb(248, 142, 100);
+}
+
+.LightMode {
+    --Bg: rgb(227, 250, 249);
+    --TextArea: rgb(221, 221, 221);
+    --Text: black;
+    --Toggle: rgb(22, 22, 44);
+    --TextToggle: white;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--Bg);
+    color: var(--Text);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header {
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+
+.Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 5px var(--Clr1);
+    color: var(--Clr1);
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+}
+
+.Logo .T1 {
+    color: var(--Clr2);
+}
+
+.Logo .T2 {
+    color: var(--Clr3);
+}
+
+.DarkmodeToggle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--Toggle);
+    color: var(--TextToggle);
+    cursor: pointer;
+}
+
+.Title {
+    margin-top: 3cm;
+    margin-bottom: 2cm;
+    font-size: x-large;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TextArea {
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+    ;
+}
+
+.TextArea textarea {
+    height: 160px;
+    padding: 20px;
+    border-radius: 20px;
+    resize: none;
+    background-color: var(--TextArea);
+    border: solid rgb(52, 48, 48);
+}
+
+.Option {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    user-select: none;
+}
+
+label {
+    position: relative;
+}
+
+label [type="checkbox"] {
+    opacity: 0;
+}
+
+.Option input:checked~.CheckboxCustom {
+    background-color: rgb(79, 78, 78);
+}
+
+.Option input:checked~.CheckboxCustom::after{
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+.Option .CheckboxCustom::after{
+    position: absolute;
+    content: "";
+    opacity: 0;
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--Clr2);
+    border-width: 0 5px 5px 0;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.Option .CheckboxCustom {
+    position: absolute;
+    cursor: pointer;
+    top: -3px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    scale: 0.6;
+    background-color: rgb(103, 103, 103);
+}
+
+.Info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3cm;
+    margin-bottom: 2cm;
+    width: 200%;
+}
+
+.Total{
+    background-color: gray;
+    border-radius: 15px;
+    width: 180px;
+    height: 130px;
+    padding: 15px;
+    color: black;
+}
+.Total h1{
+    margin-top: 0;
+    font-size: 50px;
+}
+
+.Total.Char{
+    background-color: var(--Clr1);
+}
+
+.Total.Word{
+    background-color: var(--Clr2);
+}
+
+.Total.Sentence{
+    background-color: var(--Clr3);
+}

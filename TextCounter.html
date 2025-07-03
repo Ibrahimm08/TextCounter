@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Counter</title>
+    <title>Text Tally</title>
     <link rel="stylesheet" href="Style.css">
     <script src="Scripts.js"></script>
 </head>
+
 <body>
     <header>
-        <div class="Logo"></div>
+        <div class="Logo">
+            <h1>.<span class="T1">T</span><span class="T2">T</span></h1>
+        </div>
         <button class="DarkmodeToggle">Sun</button>
     </header>
 
     <main>
-        <h1>Analyse your Text in Real-Time</h1>
-        <textarea class="TextInput"></textarea>
-        <div class="Option">
-            <div class="Spaces">
-                <input type="checkbox">
-                <p>Exclude Spaces</p>
-            </div>
-
-            <div class="CharacterLimit">
-                <input type="checkbox">
-                <p>Set Character Limit</p>
-            </div>
-
-            <div class="ReadingTime">
-                <p>Approx. reading time <span>0</span> minute(s)</p>
+        <div class="Title">
+            <h1>Analyse your Text in Real-Time</h1>
+        </div>
+        <div class="TextArea">
+            <textarea class="TextInput" placeholder="Start typing here... (or Paste text)"></textarea>
+            
+            <div class="Option">
+                <label class="Spaces">
+                    <input type="checkbox">
+                    <span class="CheckboxCustom"></span>
+                    <span>Exclude Spaces</span>
+                </label>
+                
+                <label class="CharacterLimit">
+                    <input type="checkbox">
+                    <span class="CheckboxCustom"></span>
+                    <span>Set Character Limit</span>
+                </label>
+    
+                <div class="ReadingTime">
+                    <span class="ReadText">Approx. reading time <span id="ReadingTime">0</span> minute(s)</span>
+                </div>
             </div>
         </div>
 
@@ -50,12 +61,13 @@
         </div>
 
         <!-- Optional -->
-        <div class="LetterInfo">
+        <!-- <div class="LetterInfo">
             <h2>Letter Density</h2>
             <p>No Characters found</p>
-        </div>
-        
+        </div> -->
+
     </main>
 
 </body>
+
 </html>
