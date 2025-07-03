@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Tally</title>
     <link rel="stylesheet" href="Style.css">
-    <script src="Scripts.js"></script>
+    <script src="Scripts.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
             <h1>Analyse your Text in Real-Time</h1>
         </div>
         <div class="TextArea">
-            <textarea class="TextInput" placeholder="Start typing here... (or Paste text)"></textarea>
+            <textarea class="TextInput" id="TextInput" oninput="Track()" placeholder="Start typing here... (or Paste text)"></textarea>
             
             <div class="Option">
                 <label class="Spaces">
@@ -45,17 +45,17 @@
 
         <div class="Info">
             <div class="Total Char">
-                <h1>00</h1>
+                <h1 id="CharTotal">00</h1>
                 <p>Total Characters</p>
             </div>
 
             <div class="Total Word">
-                <h1>00</h1>
+                <h1 id="WordTotal">00</h1>
                 <p>Word Count</p>
             </div>
 
             <div class="Total Sentence">
-                <h1>00</h1>
+                <h1 id="SentenceTotal">00</h1>
                 <p>Sentence Count</p>
             </div>
         </div>
